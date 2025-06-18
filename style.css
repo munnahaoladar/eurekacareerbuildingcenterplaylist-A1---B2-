@@ -4,17 +4,17 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    margin: 0; /* ব্রাউজারের ডিফল্ট মার্জিন সরিয়ে নেওয়া হলো */
+    margin: 0;
     padding: 0;
 }
 
 /* Header Styles */
 .main-header {
-    background-color: #0056b3; /* হেডার ব্যাকগ্রাউন্ড কালার */
-    color: #fff; /* হেডারের টেক্সট কালার */
-    padding: 1rem 0; /* ওপর-নিচে প্যাডিং */
+    background-color: #0056b3;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main-header h1 {
@@ -22,56 +22,23 @@ body {
     font-size: 2.5rem;
 }
 
-.main-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex; /* নেভিগেশন আইটেমগুলোকে এক লাইনে আনার জন্য */
-    justify-content: center; /* মাঝখানে আনার জন্য */
-}
-
-.main-header nav ul li {
-    margin: 0 15px; /* আইটেমগুলোর মধ্যে স্পেস */
-}
-
-.main-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease; /* হোভারে স্মুথ ট্রানজিশন */
-}
-
-.main-header nav ul li a:hover {
-    color: #e0e0e0; /* হোভারে কালার পরিবর্তন */
-}
-
-/* Main Content Wrapper Styles (আপনার দেওয়া মার্জিন ও প্যাডিং) */
+/* Main Content Wrapper Styles */
 .main-content {
-    padding: 20px; /* কন্টেন্ট এরিয়ার চারপাশে প্যাডিং */
-    max-width: 1200px; /* ওয়েবসাইটের কন্টেন্টের সর্বোচ্চ প্রস্থ */
-    margin: 20px auto; /* ওপর-নিচে 20px মার্জিন, ডানে-বামে অটো (মাঝখানে আনার জন্য) */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* প্যাডিং এবং বর্ডার বক্সের ভেতরের অংশ */
+    box-sizing: border-box;
 }
-
-/* আপনার div এর ইনলাইন স্টাইলকে ক্লাস এ পরিবর্তন করলে ভালো হয় */
-/* .your-specific-content-div {
-    margin-top: 2.54cm;
-    margin-left: 2.54cm;
-    margin-right: 2.54cm;
-    margin-bottom: 2.54cm;
-    padding: 10px;
-} */
-
 
 /* Footer Styles */
 .main-footer {
-    background-color: #333; /* ফুটার ব্যাকগ্রাউন্ড কালার */
-    color: #fff; /* ফুটারের টেক্সট কালার */
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 1.5rem 0;
-    margin-top: 30px; /* কন্টেন্টের পর ফুটারের ওপর একটু মার্জিন */
+    margin-top: 30px;
 }
 
 .main-footer p {
@@ -79,19 +46,34 @@ body {
     font-size: 0.9rem;
 }
 
+/* New Styles for Contact Info and Logo */
+.main-footer .contact-info {
+    display: flex; /* লোগো এবং টেক্সট এক লাইনে আনার জন্য */
+    align-items: center; /* উল্লম্বভাবে মাঝখানে আনার জন্য */
+    justify-content: center; /* অনুভূমিকভাবে মাঝখানে আনার জন্য */
+    font-size: 1rem; /* কন্টাক্ট টেক্সটের ফন্ট সাইজ */
+    margin-top: 10px; /* উপরের মার্জিন যোগ করা হয়েছে */
+}
+
+.main-footer .contact-logo {
+    width: 24px; /* লোগোর প্রস্থ */
+    height: 24px; /* লোগোর উচ্চতা */
+    margin-right: 8px; /* লোগো এবং টেক্সটের মধ্যে স্পেস */
+    vertical-align: middle; /* টেক্সটের সাথে উল্লম্বভাবে সারিবদ্ধ করার জন্য */
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .main-header h1 {
         font-size: 2rem;
     }
-    .main-header nav ul {
-        flex-direction: column; /* ছোট স্ক্রিনে নেভিগেশন আইটেমগুলো কলাম আকারে আসবে */
-    }
-    .main-header nav ul li {
-        margin: 5px 0;
-    }
     .main-content {
-        margin: 10px auto; /* ছোট স্ক্রিনে মার্জিন কমিয়ে দেওয়া হলো */
+        margin: 10px auto;
         padding: 10px;
+    }
+    .main-footer .contact-logo {
+        width: 20px; /* ছোট স্ক্রিনে লোগো আরও ছোট করা যেতে পারে */
+        height: 20px;
     }
 }
